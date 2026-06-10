@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinese Culture Connection — 40 Years of Building Bridges in Greater Boston</title>
+<meta name="description" content="For 40 years the Chinese Culture Connection has built bridges between American and Chinese communities across Greater Boston through education, the arts, and celebration. A Malden-based 501(c)(3) nonprofit.">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chinese Culture Connection — 40 Years of Building Bridges">
+<meta property="og:description" content="A Malden-based nonprofit empowering Chinese immigrant families and enriching Greater Boston through culture, education, and the arts. Help us keep the bridge standing.">
+<meta property="og:image" content="assets/img/gala.png">
+
+<!-- English display + body fonts (Google Fonts permitted for Latin text) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --red:#C0142B;
+    --red-deep:#7c0a1a;
+    --red-ink:#4a0710;
+    --gold:#C8A24B;
+    --gold-soft:#e3c987;
+    --ink:#221a18;
+    --slate:#5a4f4c;
+    --paper:#ffffff;
+    --paper-warm:#fbf6ef;
+    --line:rgba(34,26,24,.12);
+    --shadow:0 24px 60px -28px rgba(74,7,16,.45);
+    --display:"Fraunces", Georgia, "Times New Roman", serif;
+    --sans:"Inter", system-ui, -apple-system, sans-serif;
+    --cjk:"PingFang TC","Apple LiGothic Medium","Microsoft JhengHei",sans-serif;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    font-size:18px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .cjk{font-family:var(--cjk)}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55em;
+    font-family:var(--sans);font-weight:700;font-size:1.02rem;
+    padding:.85em 1.7em;border-radius:999px;text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    border:2px solid transparent;cursor:pointer;line-height:1;
+  }
+  .btn-gold{background:var(--gold);color:#3a2a08;box-shadow:0 12px 30px -12px rgba(200,162,75,.8)}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 38px -12px rgba(200,162,75,.95)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 12px 30px -12px rgba(192,20,43,.85)}
+  .btn-red:hover{transform:translateY(-3px);box-shadow:0 18px 40px -12px rgba(192,20,43,1)}
+
+  /* ---------- Top bar ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.86);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 28px;max-width:var(--wrap);margin:0 auto}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-logo img{height:46px;width:auto}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a{text-decoration:none;font-weight:600;font-size:.98rem;color:var(--slate);transition:color .15s}
+  .nav-links a:hover{color:var(--red)}
+  .nav-links .btn{padding:.6em 1.3em;font-size:.95rem}
+  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;color:#fff;overflow:hidden;
+    background:
+      radial-gradient(120% 120% at 80% -10%, rgba(200,162,75,.30), transparent 55%),
+      radial-gradient(100% 100% at 0% 100%, rgba(0,0,0,.35), transparent 60%),
+      linear-gradient(135deg, var(--red) 0%, var(--red-deep) 55%, var(--red-ink) 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;opacity:.10;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.2'%3E%3Cpath d='M0 40h80M40 0v80M0 0l80 80M80 0L0 80'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:80px 80px;
+  }
+  .hero-glyph{
+    position:absolute;font-family:var(--cjk);font-weight:700;
+    color:rgba(255,255,255,.06);line-height:1;user-select:none;pointer-events:none;
+    font-size:min(46vw,560px);right:-6vw;top:50%;transform:translateY(-50%);
+  }
+  .hero-inner{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;padding:96px 28px 104px}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:.6em;
+    border:1px solid rgba(255,255,255,.4);border-radius:999px;
+    padding:.5em 1.1em;font-weight:600;font-size:.9rem;letter-spacing:.04em;
+    text-transform:uppercase;margin-bottom:26px;color:var(--gold-soft);
+  }
+  .hero h1{
+    font-family:var(--display);font-weight:900;
+    font-size:clamp(2.7rem,6.2vw,5.2rem);line-height:1.02;letter-spacing:-.01em;
+    max-width:16ch;margin-bottom:22px;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero-lead{font-size:clamp(1.1rem,2.2vw,1.4rem);max-width:48ch;color:rgba(255,255,255,.92);margin-bottom:36px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .hero-foot{margin-top:46px;display:flex;flex-wrap:wrap;gap:28px 40px;font-size:.95rem;color:rgba(255,255,255,.78)}
+  .hero-foot b{color:#fff}
+
+  /* ---------- Stats band ---------- */
+  .stats{background:var(--ink);color:#fff}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:46px 28px}
+  .stat{text-align:center;padding:14px}
+  .stat .num{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,4.6vw,3.4rem);color:var(--gold-soft);line-height:1}
+  .stat .lbl{font-size:.92rem;color:rgba(255,255,255,.72);margin-top:8px;letter-spacing:.02em}
+  @media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:18px}}
+
+  /* ---------- Section scaffold ---------- */
+  section{padding:92px 0}
+  .eyebrow{
+    font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red);display:flex;align-items:center;gap:.7em;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--gold);display:inline-block}
+  h2.title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.08;letter-spacing:-.01em;max-width:18ch}
+  .lead{font-size:1.18rem;color:var(--slate);max-width:62ch;margin-top:22px}
+
+  /* ---------- Mission ---------- */
+  .mission{background:var(--paper-warm)}
+  .mission-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .pull{
+    font-family:var(--display);font-style:italic;font-weight:500;
+    font-size:clamp(1.4rem,2.6vw,1.85rem);line-height:1.4;color:var(--red-ink);
+    border-left:4px solid var(--gold);padding-left:26px;
+  }
+  .mission-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow)}
+  .mission-card h3{font-family:var(--display);font-size:1.3rem;margin-bottom:10px;color:var(--red-ink)}
+  .mission-card p{color:var(--slate);font-size:1rem}
+  .mission-card .seal{display:flex;align-items:center;gap:14px;margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+  .mission-card .seal .star{font-size:1.5rem;color:var(--gold)}
+  .mission-card .seal small{color:var(--slate);font-size:.86rem;line-height:1.4}
+  @media(max-width:820px){.mission-grid{grid-template-columns:1fr;gap:34px}}
+
+  /* ---------- Featured event ---------- */
+  .flagship{
+    position:relative;color:#fff;border-radius:26px;overflow:hidden;
+    background:
+      radial-gradient(120% 140% at 90% 0%, rgba(200,162,75,.35), transparent 55%),
+      linear-gradient(120deg,var(--red-deep),var(--red-ink));
+    padding:54px;box-shadow:var(--shadow);
+  }
+  .flagship .tag{display:inline-block;background:var(--gold);color:#3a2a08;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:.4em 1em;border-radius:999px;margin-bottom:20px}
+  .flagship h3{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.1;max-width:18ch}
+  .flagship p{margin-top:16px;max-width:54ch;color:rgba(255,255,255,.9);font-size:1.08rem}
+  .flagship .big{position:absolute;right:40px;bottom:24px;font-family:var(--display);font-weight:900;font-size:clamp(4rem,11vw,9rem);color:rgba(255,255,255,.12);line-height:.8}
+  @media(max-width:680px){.flagship{padding:34px}.flagship .big{display:none}}
+
+  /* ---------- Event cards ---------- */
+  .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+  .ecard{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease, box-shadow .2s ease}
+  .ecard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .ecard .pic{aspect-ratio:16/9;overflow:hidden;background:#f0e9e0}
+  .ecard .pic img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .ecard:hover .pic img{transform:scale(1.06)}
+  .ecard .body{padding:22px 22px 26px;flex:1;display:flex;flex-direction:column}
+  .ecard h4{font-family:var(--display);font-weight:700;font-size:1.22rem;color:var(--red-ink);line-height:1.2}
+  .ecard .meta{font-size:.84rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;margin:6px 0 12px}
+  .ecard p{font-size:.97rem;color:var(--slate)}
+  @media(max-width:900px){.events-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.events-grid{grid-template-columns:1fr}}
+
+  /* ---------- Timeline ---------- */
+  .history{background:var(--red-ink);color:#fff;position:relative;overflow:hidden}
+  .history .eyebrow{color:var(--gold-soft)}
+  .history .eyebrow::before{background:var(--gold)}
+  .history h2.title{color:#fff}
+  .timeline{margin-top:54px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .timeline::before{content:"";position:absolute;top:26px;left:6%;right:6%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+  .tl{position:relative;padding:0 16px;text-align:center}
+  .tl .dot{width:16px;height:16px;border-radius:50%;background:var(--gold);margin:18px auto 22px;box-shadow:0 0 0 6px rgba(200,162,75,.2);position:relative;z-index:2}
+  .tl .yr{font-family:var(--display);font-weight:900;font-size:1.7rem;color:var(--gold-soft)}
+  .tl h4{font-size:1.05rem;margin:6px 0 8px}
+  .tl p{font-size:.92rem;color:rgba(255,255,255,.74)}
+  @media(max-width:760px){.timeline{grid-template-columns:1fr;gap:8px}.timeline::before{left:8px;right:auto;top:0;bottom:0;width:2px;height:auto}.tl{text-align:left;padding:14px 0 14px 34px}.tl .dot{position:absolute;left:0;top:20px;margin:0}}
+
+  /* ---------- Programs ---------- */
+  .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  .pcard{border:1px solid var(--line);border-radius:16px;padding:26px 24px;background:#fff;transition:border-color .2s, transform .2s}
+  .pcard:hover{border-color:var(--gold);transform:translateY(-4px)}
+  .pcard .ic{font-size:1.7rem;margin-bottom:12px}
+  .pcard h4{font-family:var(--display);font-size:1.18rem;color:var(--red-ink);margin-bottom:6px}
+  .pcard p{font-size:.95rem;color:var(--slate)}
+  @media(max-width:820px){.prog-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.prog-grid{grid-template-columns:1fr}}
+
+  /* ---------- Donate CTA ---------- */
+  .donate{
+    position:relative;color:#fff;text-align:center;overflow:hidden;
+    background:
+      radial-gradient(120% 120% at 50% -20%, rgba(200,162,75,.4), transparent 60%),
+      linear-gradient(135deg,var(--red),var(--red-ink));
+  }
+  .donate .wrap{padding:96px 28px}
+  .donate h2{font-family:var(--display);font-weight:900;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.05;max-width:20ch;margin:0 auto 22px}
+  .donate p{font-size:1.18rem;max-width:56ch;margin:0 auto 36px;color:rgba(255,255,255,.92)}
+  .donate-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .donate .fineprint{margin-top:30px;font-size:.9rem;color:rgba(255,255,255,.72)}
+  .donate .fineprint b{color:var(--gold-soft)}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:rgba(255,255,255,.8);padding:64px 0 40px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  footer img.flogo{height:54px;margin-bottom:18px;filter:brightness(0) invert(1);opacity:.92}
+  footer h5{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:14px}
+  footer a{color:rgba(255,255,255,.8);text-decoration:none;transition:color .15s}
+  footer a:hover{color:#fff}
+  .foot-list{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:.96rem}
+  .socials{display:flex;gap:14px;margin-top:16px}
+  .socials a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;transition:background .2s,border-color .2s}
+  .socials a:hover{background:var(--red);border-color:var(--red)}
+  .foot-bottom{margin-top:46px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:.85rem;color:rgba(255,255,255,.55);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* ---------- Reveal animation (progressive, safe without JS) ---------- */
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+  .js .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top"><img src="assets/img/logo.png" alt="Chinese Culture Connection logo"></a>
+    <nav class="nav-links">
+      <a href="#mission">Mission</a>
+      <a href="#events">Events</a>
+      <a href="#history">Our Story</a>
+      <a href="#programs">Programs</a>
+      <a class="btn btn-red" href="https://www.chinesecultureconnection.org/donate" target="_blank" rel="noopener">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<a id="top"></a>
+<section class="hero" style="padding:0">
+  <span class="hero-glyph" aria-hidden="true">華</span>
+  <div class="hero-inner">
+    <span class="hero-badge">Est. 1985 · Malden, Massachusetts</span>
+    <h1>Forty Years of Building <em>Bridges</em> Between Cultures</h1>
+    <p class="hero-lead">The Chinese Culture Connection empowers Chinese immigrant families and enriches all of Greater Boston through education, the arts, and shared celebration — one neighbor, one student, one tradition at a time.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="https://www.chinesecultureconnection.org/donate" target="_blank" rel="noopener">♥ Support Our Work</a>
+      <a class="btn btn-ghost" href="#events">See What We Do</a>
+    </div>
+    <div class="hero-foot">
+      <div><b>1,000–2,000</b> guests at our Lunar New Year Gala</div>
+      <div><b>200+</b> athletes at our Thanksgiving Tournament</div>
+      <div><b>3-Star</b> Charity Navigator rating</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="num">40</div><div class="lbl">Years of service</div></div>
+    <div class="stat reveal"><div class="num">1985</div><div class="lbl">Founded in Massachusetts</div></div>
+    <div class="stat reveal"><div class="num">15+</div><div class="lbl">Annual Lunar New Year Galas</div></div>
+    <div class="stat reveal"><div class="num">501(c)(3)</div><div class="lbl">Tax-deductible nonprofit</div></div>
+  </div>
+</div>
+
+<!-- ===== MISSION ===== -->
+<section class="mission" id="mission">
+  <div class="wrap mission-grid">
+    <div class="reveal">
+      <div class="eyebrow">Who We Are</div>
+      <h2 class="title">A bridge between American and Chinese communities — built to last.</h2>
+      <p class="lead">Founded in 1985 and rooted in Malden since 1999, the Chinese Culture Connection helps Chinese immigrants and their children appreciate and retain their heritage, develop bicultural fluency, and share the richness of Chinese language and culture with everyone around them.</p>
+      <p class="pull" style="margin-top:30px">"Through education, dialogue, and celebration, we help neighbors of every background understand one another — and belong."</p>
+    </div>
+    <div class="mission-card reveal">
+      <h3>Trusted stewardship</h3>
+      <p>A registered 501(c)(3) public charity serving the Greater Boston area. Every gift is tax-deductible and reinvested directly into programs for children, families, and seniors.</p>
+      <div class="seal">
+        <span class="star">★★★</span>
+        <small><b>3-Star rated by Charity Navigator</b><br>EIN 04-3103223 · 75 Pleasant Street, Malden, MA</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVENTS ===== -->
+<section id="events">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Signature Events</div>
+      <h2 class="title">Celebrations that bring the whole region together.</h2>
+      <p class="lead">From a Lunar New Year gala that fills a high-school auditorium to a Thanksgiving tournament where six-year-olds rally against eighty-six-year-olds, our events turn culture into community.</p>
+    </div>
+
+    <div class="flagship reveal" style="margin-top:46px">
+      <span class="tag">Flagship Celebration</span>
+      <h3>The Malden Lunar New Year Celebration Gala</h3>
+      <p>Now in its sixteenth year, our flagship gala welcomes <b>1,000 to 2,000 guests</b> for an evening of lion dance, music, food, and tradition — one of the largest Lunar New Year celebrations north of Boston, and a homecoming for families across the region.</p>
+      <span class="big" aria-hidden="true">春節</span>
+    </div>
+
+    <div class="events-grid">
+      <article class="ecard reveal">
+        <div class="pic"><img src="assets/img/gala.png" alt="Annual Fundraising Gala & Awards Ceremony"></div>
+        <div class="body">
+          <h4>Annual Fundraising Gala &amp; Awards</h4>
+          <div class="meta">21st Year · Every Spring</div>
+          <p>An elegant evening honoring community leaders and raising the support that keeps our programs free and affordable for the families who need them most.</p>
+        </div>
+      </article>
+      <article class="ecard reveal">
+        <div class="pic"><img src="assets/img/pingpong.png" alt="Thanksgiving Ping Pong Tournament"></div>
+        <div class="body">
+          <h4>Thanksgiving Ping Pong Tournament</h4>
+          <div class="meta">11th Year · 200+ Athletes</div>
+          <p>Fifty teams and players aged 6 to 86 gather every Thanksgiving for friendly competition that has become a beloved Greater Boston tradition.</p>
+        </div>
+      </article>
+      <article class="ecard reveal">
+        <div class="pic"><img src="assets/img/aapi.png" alt="AAPI Heritage Celebration"></div>
+        <div class="body">
+          <h4>AAPI Heritage Celebration</h4>
+          <div class="meta">Every May</div>
+          <p>Honoring the untold stories of Asian immigrants and their journey to America, with performances, food, and family activities open to all.</p>
+        </div>
+      </article>
+      <article class="ecard reveal">
+        <div class="pic"><img src="assets/img/yueopera.png" alt="East Meets West cultural dialogue performance"></div>
+        <div class="body">
+          <h4>East Meets West Dialogue</h4>
+          <div class="meta">Monthly Series</div>
+          <p>A monthly cross-cultural conversation — from Chinese Yue opera meeting Western opera to Tang poetry traveling across four languages.</p>
+        </div>
+      </article>
+      <article class="ecard reveal">
+        <div class="pic"><img src="assets/img/masks.png" alt="Masks Around the World workshop"></div>
+        <div class="body">
+          <h4>Arts &amp; Culture Workshops</h4>
+          <div class="meta">Year-Round</div>
+          <p>Hands-on workshops — masks around the world, Chinese knot-making, calligraphy, and more — that put living traditions into children's hands.</p>
+        </div>
+      </article>
+      <article class="ecard reveal">
+        <div class="pic"><img src="assets/img/meetup.png" alt="Malden Resident Meetup community gathering"></div>
+        <div class="body">
+          <h4>Malden Resident Meetup</h4>
+          <div class="meta">Third Monday Monthly</div>
+          <p>A warm, regular gathering where neighbors share snacks, games, and resources — and where new immigrant families find a first friendly door.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HISTORY ===== -->
+<section class="history" id="history">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Our Story</div>
+      <h2 class="title">Four decades, one mission.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl reveal">
+        <div class="dot"></div>
+        <div class="yr">1985</div>
+        <h4>A classroom idea</h4>
+        <p>Founded in Reading, MA, when a mother created an "Intro to Chinese Culture" curriculum for her son's class.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="dot"></div>
+        <div class="yr">1999</div>
+        <h4>Home in Malden</h4>
+        <p>Relocated to Malden to serve its fast-growing Asian community and connect it with the city's diverse neighborhoods.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="dot"></div>
+        <div class="yr">2025</div>
+        <h4>A new beginning</h4>
+        <p>Opened a 1,600 sq ft headquarters at 75 Pleasant Street — room at last for classes, meetings, and growth.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="dot"></div>
+        <div class="yr">Today</div>
+        <h4>Forty and growing</h4>
+        <p>Serving thousands each year through education, the arts, and community programs across Greater Boston.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAMS ===== -->
+<section id="programs">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Year-Round Programs</div>
+      <h2 class="title">More than events — a community that shows up every week.</h2>
+    </div>
+    <div class="prog-grid">
+      <div class="pcard reveal"><div class="ic">📚</div><h4>CCC Chinese Language School</h4><p>Mandarin and Chinese classics for the next generation of bicultural learners.</p></div>
+      <div class="pcard reveal"><div class="ic">🐉</div><h4>Little Dragon After-School</h4><p>After-school care and summer enrichment camp that nurture discipline and identity.</p></div>
+      <div class="pcard reveal"><div class="ic">🌱</div><h4>Youth Leadership &amp; Mentoring</h4><p>YLMP and YouLead career panels that help young people lead and give back.</p></div>
+      <div class="pcard reveal"><div class="ic">🗣️</div><h4>Adult Mandarin Meetup</h4><p>A welcoming space for adults to practice language and build friendships.</p></div>
+      <div class="pcard reveal"><div class="ic">🎶</div><h4>Bilingual Rhythm Time</h4><p>A parent-and-child music program that makes culture joyful from the very start.</p></div>
+      <div class="pcard reveal"><div class="ic">🧘</div><h4>Tai Chi &amp; Wellness</h4><p>Weekly Tai Chi and health workshops keeping seniors active and connected.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DONATE ===== -->
+<section class="donate" id="donate">
+  <span class="hero-glyph cjk" aria-hidden="true" style="color:rgba(255,255,255,.07)">緣</span>
+  <div class="wrap reveal">
+    <h2>Help us keep the bridge standing for the next forty years.</h2>
+    <p>Your gift preserves cherished traditions, keeps classes affordable for immigrant families, and opens our doors to children, seniors, and neighbors across Greater Boston. Every dollar stays in the community.</p>
+    <div class="donate-cta">
+      <a class="btn btn-gold" href="https://www.chinesecultureconnection.org/donate" target="_blank" rel="noopener">♥ Donate Today</a>
+      <a class="btn btn-ghost" href="mailto:info@chinesecultureconnection.org">Become a Sponsor</a>
+    </div>
+    <p class="fineprint">The Chinese Culture Connection, Inc. is a registered <b>501(c)(3)</b> nonprofit. Contributions are <b>tax-deductible</b> to the fullest extent allowed by law · EIN <b>04-3103223</b></p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <img class="flogo" src="assets/img/logo.png" alt="Chinese Culture Connection">
+      <p style="max-width:34ch;font-size:.96rem;color:rgba(255,255,255,.7)">Building bridges between American and Chinese people through interactive programs and the arts since 1985.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/chinesecultureconnection/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://www.instagram.com/chinesecultureconnection/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.youtube.com/@chinesecultureconnection303" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        <a href="https://www.linkedin.com/company/chinese-culture-connection" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div>
+      <h5>Visit Us</h5>
+      <ul class="foot-list">
+        <li>75 Pleasant Street, Suite 403<br>Malden, MA 02148</li>
+        <li>Mon–Fri · 9:30 AM – 5:00 PM</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Get in Touch</h5>
+      <ul class="foot-list">
+        <li><a href="tel:+17813216316">781-321-6316</a></li>
+        <li><a href="mailto:info@chinesecultureconnection.org">info@chinesecultureconnection.org</a></li>
+        <li><a href="https://chinesecultureconnection.org" target="_blank" rel="noopener">chinesecultureconnection.org</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 1985–2026 Chinese Culture Connection, Inc. · 華夏文化協會 · All rights reserved.</span>
+    <span>A Malden, Massachusetts 501(c)(3) nonprofit organization.</span>
+  </div>
+</footer>
+
+<script>
+  // Progressive reveal — IntersectionObserver with a robust fallback so content
+  // is never trapped hidden (handles environments that don't fire IO/rAF).
+  (function(){
+    var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    if(!els.length) return;
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(function(el){ io.observe(el); });
+    // Fallback: reveal anything already in view on load, and a hard safety net.
+    function revealInView(){
+      var h = window.innerHeight || document.documentElement.clientHeight;
+      els.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if(r.top < h*0.95 && r.bottom > 0){ el.classList.add('in'); }
+      });
+    }
+    window.addEventListener('load', revealInView);
+    window.addEventListener('scroll', revealInView, {passive:true});
+    revealInView();
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>
