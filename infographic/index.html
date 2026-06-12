@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chinese Culture Connection — Impact Infographic</title>
+<style>
+  :root{
+    --red:#C0142B;
+    --red-deep:#7c0a1a;
+    --ink:#221a18;
+    --slate:#544946;
+    --gold:#C8A24B;
+    --gold-deep:#a8842f;
+    --paper:#ffffff;
+    --warm:#faf5ee;
+    --line:#e6ddd2;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:"Helvetica Neue",Arial,sans-serif;
+    --cjk:"PingFang TC","Apple LiGothic Medium","Microsoft JhengHei",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{size:Letter;margin:0}
+  html,body{background:#cfcfcf}
+  .sheet{
+    width:8.5in;height:11in;margin:0 auto;background:var(--paper);
+    font-family:var(--sans);color:var(--ink);line-height:1.34;position:relative;
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  .cjk{font-family:var(--cjk)}
+
+  /* ---- Header ---- */
+  .hd{background:var(--red);color:#fff;padding:20px 30px 18px;position:relative;border-bottom:4px solid var(--gold)}
+  .hd .row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+  .hd h1{font-family:var(--serif);font-weight:700;font-size:33px;line-height:1.02;letter-spacing:.2px}
+  .hd .zh{font-family:var(--cjk);font-weight:700;font-size:17px;color:var(--gold);margin-top:5px;letter-spacing:2px}
+  .hd .zh small{color:rgba(255,255,255,.92);font-weight:600;font-size:12px;letter-spacing:.3px;margin-left:8px}
+  .hd .tag{font-size:11.5px;color:rgba(255,255,255,.92);margin-top:8px;letter-spacing:.4px}
+  .hd .meta{text-align:right;font-size:10px;line-height:1.6;color:rgba(255,255,255,.9);white-space:nowrap}
+  .hd .meta .f{color:var(--gold);font-weight:700;letter-spacing:1px;font-size:10px}
+  .hd .meta .w{font-weight:700;color:#fff}
+
+  /* ---- Stat band ---- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);color:#fff}
+  .stats .s{padding:13px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}
+  .stats .s:last-child{border-right:none}
+  .stats .n{font-family:var(--serif);font-weight:700;font-size:30px;color:var(--gold);line-height:1}
+  .stats .l{font-size:9px;letter-spacing:.5px;color:rgba(255,255,255,.78);margin-top:5px;text-transform:uppercase;line-height:1.35}
+
+  .intro{padding:14px 30px;font-size:11.2px;color:var(--slate);background:var(--warm);border-bottom:1px solid var(--line);line-height:1.5}
+
+  /* ---- Body columns ---- */
+  .cols{display:grid;grid-template-columns:1.06fr .94fr;flex:1}
+  .col{padding:18px 24px 16px;display:flex;flex-direction:column}
+  .col.left{border-right:1px solid var(--line)}
+  .sechead{margin-bottom:12px}
+  .sechead .kick{font-size:9px;font-weight:700;letter-spacing:1.4px;color:var(--red);text-transform:uppercase}
+  .sechead h2{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--ink);margin-top:2px;line-height:1.1}
+
+  /* event item */
+  .evlist{display:flex;flex-direction:column;justify-content:space-between;flex:1}
+  .ev{padding:9px 0 9px 13px;border-left:3px solid var(--gold);position:relative}
+  .ev:nth-child(odd){border-left-color:var(--red)}
+  .ev .date{font-size:8.8px;font-weight:700;letter-spacing:.8px;color:var(--gold-deep);text-transform:uppercase}
+  .ev h3{font-size:13.4px;font-weight:700;color:var(--ink);margin:2px 0 3px;line-height:1.18}
+  .ev p{font-size:10.4px;color:var(--slate);line-height:1.44}
+  .pills{margin-top:6px;display:flex;flex-wrap:wrap;gap:4px}
+  .pill{font-size:8.4px;font-weight:700;letter-spacing:.2px;background:var(--warm);border:1px solid var(--line);color:var(--ink);padding:2.5px 7px;border-radius:20px}
+
+  /* right column blocks */
+  .rstack{display:flex;flex-direction:column;justify-content:space-between;flex:1}
+  .emw-box{background:var(--warm);border:1px solid var(--line);border-left:3px solid var(--red);padding:12px 14px;border-radius:4px}
+  .emw-box p{font-size:10.8px;color:var(--slate);line-height:1.5}
+  .block .bh{font-size:9px;font-weight:700;letter-spacing:1.2px;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+  .areas{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px}
+  .area{font-size:10.3px;color:var(--ink);font-weight:600;padding-left:12px;position:relative;line-height:1.3}
+  .area::before{content:"";position:absolute;left:0;top:5px;width:5px;height:5px;background:var(--gold);border-radius:1px}
+  .partners{font-size:10.3px;color:var(--slate);line-height:1.5}
+
+  .why{background:var(--red);color:#fff;border-radius:5px;padding:13px 15px}
+  .why .bh{color:var(--gold);}
+  .why p{font-size:10.5px;color:rgba(255,255,255,.95);line-height:1.5}
+
+  /* CTA */
+  .cta{display:flex;justify-content:space-between;align-items:center;gap:18px;
+    padding:13px 30px;background:var(--warm);border-top:3px solid var(--gold)}
+  .cta-h{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--red);line-height:1.1}
+  .cta-p{font-size:10px;color:var(--slate);margin-top:2px;max-width:42ch;line-height:1.4}
+  .cta-r{text-align:right;white-space:nowrap}
+  .cta-c{font-size:11px;font-weight:700;color:var(--ink)}
+  .cta-c2{font-size:9.4px;color:var(--slate);margin-top:2px}
+
+  /* footer */
+  .ft{background:var(--ink);color:rgba(255,255,255,.82);padding:11px 30px;display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:9.4px}
+  .ft b{color:#fff}
+  .ft .gold{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div class="row">
+      <div>
+        <h1>Chinese Culture Connection</h1>
+        <div class="zh cjk">華夏文化協會<small>Hua Xia Wen Hua Xie Hui</small></div>
+        <div class="tag">Empowering Communities &nbsp;·&nbsp; Enriching Cultures &nbsp;·&nbsp; Celebrating Diversity</div>
+      </div>
+      <div class="meta">
+        <div class="f">FOUNDED 1985</div>
+        <div>Malden, MA · 501(c)(3) Nonprofit</div>
+        <div class="w">www.chinesecultureconnection.org</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="s"><div class="n">40+</div><div class="l">Years Serving<br>Greater Boston</div></div>
+    <div class="s"><div class="n">100+</div><div class="l">Events &amp;<br>Programs Annually</div></div>
+    <div class="s"><div class="n">10,000+</div><div class="l">People Reached<br>Every Year</div></div>
+    <div class="s"><div class="n">15+</div><div class="l">Cities &amp; Towns<br>Represented</div></div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    Founded in Reading, MA in 1985 and relocated to Malden in 1999 at the invitation of former Mayor Richard C. Howard — to support the city's growing Asian immigrant population and serve as a liaison between Asian and mainstream communities across Greater Boston.
+  </div>
+
+  <!-- COLUMNS -->
+  <div class="cols">
+
+    <!-- LEFT -->
+    <div class="col left">
+      <div class="sechead">
+        <div class="kick">Signature Programs · 2025–2026</div>
+        <h2>Events That Unite Greater Boston</h2>
+      </div>
+
+      <div class="evlist">
+      <div class="ev">
+        <div class="date">Nov 8, 2025</div>
+        <h3>11th Annual Thanksgiving Ping Pong Tournament</h3>
+        <p>200+ players ages 8–70+ from 15+ cities at Malden High School — celebrating sport, friendship, and cross-generational connection.</p>
+        <div class="pills"><span class="pill">200+ Players</span><span class="pill">Ages 8–70+</span><span class="pill">15+ Cities</span></div>
+      </div>
+
+      <div class="ev">
+        <div class="date">Feb 7, 2026</div>
+        <h3>17th Annual Malden Lunar New Year Celebration</h3>
+        <p>One of Greater Boston's largest free cultural events — 20+ performances, a community fair, arts &amp; crafts, drawing 800–1,000 attendees of all ages.</p>
+        <div class="pills"><span class="pill">Free &amp; Open to All</span><span class="pill">20+ Performances</span><span class="pill">800–1,000 Guests</span></div>
+      </div>
+
+      <div class="ev">
+        <div class="date">Apr 11, 2026</div>
+        <h3>21st Annual Fundraising Gala &amp; Awards Ceremony</h3>
+        <p>An evening of authentic Chinese banquet, live &amp; silent auctions, cultural entertainment, and honors for leaders advancing cross-cultural understanding.</p>
+        <div class="pills"><span class="pill">Community Honors</span><span class="pill">21 Years Running</span><span class="pill">Cultural Arts</span></div>
+      </div>
+
+      <div class="ev">
+        <div class="date">June 2026 · Charles River</div>
+        <h3>Dragon Boat Team</h3>
+        <p>CCC competes in North America's oldest Dragon Boat Festival, uniting paddlers of all backgrounds through sport, cultural pride, and teamwork.</p>
+        <div class="pills"><span class="pill">North America's Oldest</span><span class="pill">All Backgrounds Welcome</span></div>
+      </div>
+
+      <div class="ev">
+        <div class="date">Launched 2025 · Quarterly</div>
+        <h3>CCC Quarterly Journal</h3>
+        <p>A bilingual publication uplifting Asian and immigrant voices — featuring cultural heritage, community stories, and bilingual education. Distributed in print and digitally.</p>
+        <div class="pills"><span class="pill">Bilingual</span><span class="pill">Print &amp; Digital</span></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col right">
+      <div class="sechead">
+        <div class="kick">East Meets West Cultural Dialogue</div>
+        <h2>Shared Cultures. Common Dreams.</h2>
+      </div>
+
+      <div class="rstack">
+      <div class="emw-box">
+        <p>EMW is CCC's signature year-round platform — bringing diverse communities together to share their unique cultures and discover the common values, dreams, and hopes that unite us all. Free and open to everyone.</p>
+      </div>
+
+      <div class="block">
+        <div class="bh">Program Areas</div>
+        <div class="areas">
+          <div class="area">AAPI Heritage Month</div>
+          <div class="area">Youth Leadership &amp; Mentoring</div>
+          <div class="area">Civic Engagement Forums</div>
+          <div class="area">Holiday Swap Party</div>
+          <div class="area">Arts &amp; Wellness</div>
+          <div class="area">Immigrant Literacy</div>
+          <div class="area">Parenting &amp; Education</div>
+          <div class="area">Collaborative Cultural Events</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="bh">Community Partners</div>
+        <div class="partners">Bike to the Sea · Malden Reads · Malden River Works and neighboring organizations across Greater Boston.</div>
+      </div>
+
+      <div class="why">
+        <div class="bh">Why Support CCC?</div>
+        <p>For over 40 years, CCC has been the cultural bridge between Asian immigrant communities and the broader public. Your support sustains free programs, amplifies underrepresented voices, and keeps Greater Boston's diverse communities deeply connected.</p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-l">
+      <div class="cta-h">Partner With Us</div>
+      <div class="cta-p">Your sponsorship keeps our cultural programs free and open to all of Greater Boston.</div>
+    </div>
+    <div class="cta-r">
+      <div class="cta-c">gala@chinesecultureconnection.org</div>
+      <div class="cta-c2">781-321-6316 &nbsp;·&nbsp; www.chinesecultureconnection.org</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ft">
+    <div><b>Chinese Culture Connection</b> &nbsp;·&nbsp; P.O. Box #236, Malden, MA 02148</div>
+    <div><span class="gold">gala@chinesecultureconnection.org</span> &nbsp;·&nbsp; www.chinesecultureconnection.org</div>
+  </div>
+
+</div>
+</body>
+</html>
