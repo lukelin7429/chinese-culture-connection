@@ -64,17 +64,17 @@
   .wk::before{content:"";position:absolute;left:0;top:6px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
   .wk b{color:var(--ink)}
   .joinany{margin-top:9px;font-size:10px;font-style:italic;color:var(--jade);font-weight:600;line-height:1.4}
+  .decorwrap{margin-top:6px}
+  .decor{display:flex;justify-content:center;gap:13px}
+  .dcircle{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 7px 15px -7px rgba(0,0,0,.35)}
+  .decortag{text-align:center;font-size:11px;font-weight:700;font-style:italic;color:var(--gold-deep);margin-top:11px}
 
   /* tuition */
   .tuition{background:#fff;border:2px solid var(--gold);border-radius:10px;padding:13px 14px;margin-bottom:13px}
   .tuition .th{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--red);margin-bottom:9px;text-align:center}
-  .price{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;color:var(--slate);padding:3px 0}
-  .price .amt{font-weight:700;color:var(--ink);font-size:13px}
-  .earlybird{background:var(--red);color:#fff;border-radius:7px;padding:9px 11px;margin:9px 0}
-  .earlybird .eb-t{font-weight:700;font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
-  .earlybird .eb-a{font-size:14px;font-weight:700}
-  .earlybird .eb-s{font-size:9.5px;color:rgba(255,255,255,.9);margin-top:2px}
-  .lunch{text-align:center;font-size:11px;font-weight:700;color:var(--jade)}
+  .bigprice{text-align:center;font-family:var(--serif);font-weight:700;font-size:38px;color:var(--red);margin:8px 0 12px;line-height:1}
+  .bigprice span{font-size:17px;color:var(--slate);font-weight:600}
+  .lunch{text-align:center;font-size:11.5px;font-weight:700;color:var(--jade)}
 
   /* why families */
   .whyfam{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
@@ -117,7 +117,7 @@
   <div class="facts">
     <div class="f"><div class="ic">📅</div><div class="t">June 29 – July 31</div><div class="s">Mon–Fri, 5 weeks</div></div>
     <div class="f"><div class="ic">🎒</div><div class="t">Grades 6–8</div><div class="s">Ages 11–15</div></div>
-    <div class="f"><div class="ic">⏰</div><div class="t">9:00 AM – 4:00 PM</div><div class="s">Drop-off 8:30 · care to 5 PM</div></div>
+    <div class="f"><div class="ic">⏰</div><div class="t">9:00 AM – 4:00 PM</div><div class="s">Drop-off from 8:30 · pick-up to 5 PM</div></div>
     <div class="f"><div class="ic">📍</div><div class="t">Beebe School</div><div class="s">401 Pleasant St, Malden</div></div>
   </div>
 
@@ -149,20 +149,26 @@
         <div class="wk"><b>Week 5</b> — Creativity &amp; Invention</div>
         <div class="joinany">★ Each week stands on its own — join for one week or stay all five!</div>
       </div>
+
+      <div class="decorwrap">
+        <div class="decor">
+          <div class="dcircle" style="background:#C0142B">🎨</div>
+          <div class="dcircle" style="background:#F2682C">🥁</div>
+          <div class="dcircle" style="background:#C8A24B">📖</div>
+          <div class="dcircle" style="background:#1F7A5A">🎭</div>
+          <div class="dcircle" style="background:#2D6FA3">🌏</div>
+          <div class="dcircle" style="background:#8A3A6B">⭐</div>
+        </div>
+        <div class="decortag">A summer of creativity, culture &amp; friendship awaits!</div>
+      </div>
     </div>
 
     <!-- RIGHT -->
     <div class="rcol">
       <div class="tuition">
         <div class="th">Tuition</div>
-        <div class="price"><span>Full day</span><span class="amt">$200 / week</span></div>
-        <div class="price"><span>Half day</span><span class="amt">$120 / week</span></div>
-        <div class="earlybird">
-          <div class="eb-t">★ Early Bird — First 10 Families</div>
-          <div class="eb-a">$100 / week</div>
-          <div class="eb-s">+ one-time $20 registration fee</div>
-        </div>
-        <div class="lunch">🍱 Free lunch · 3-day-per-week minimum</div>
+        <div class="bigprice">$200 <span>/ week</span></div>
+        <div class="lunch">🍱 Free lunch included every day</div>
       </div>
 
       <div class="whyfam">
@@ -177,7 +183,7 @@
         <img class="qrimg" src="registration-qr.png" alt="Scan to register via our Google Form">
         <div style="font-size:9px;font-weight:700;color:var(--slate);margin-bottom:6px">Scan to register (Google Form)</div>
         <div class="ror">Scan the code, or contact us:</div>
-        <div class="contact">781-321-6316<br>info@chinesecultureconnection.org</div>
+        <div class="contact">781-321-6316<br><span style="font-size:9.5px">cccclass@chinesecultureconnection.org</span></div>
       </div>
     </div>
   </div>
