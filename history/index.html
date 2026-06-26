@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chinese Culture Connection — Our Story</title>
+<style>
+  :root{
+    --red:#C0142B;--red-deep:#7c0a1a;--red-ink:#4a0710;--ink:#221a18;--slate:#544946;
+    --gold:#C8A24B;--gold-deep:#a8842f;--paper:#ffffff;--warm:#faf5ee;--line:#e6ddd2;
+    --serif:Georgia,"Times New Roman",serif;--sans:"Helvetica Neue",Arial,sans-serif;
+    --cjk:"PingFang TC","Apple LiGothic Medium","Microsoft JhengHei",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{size:Letter;margin:0}
+  html,body{background:#cfcfcf}
+  .sheet{width:8.5in;height:11in;margin:0 auto;background:var(--paper);font-family:var(--sans);color:var(--ink);line-height:1.4;display:flex;flex-direction:column;overflow:hidden}
+  .cjk{font-family:var(--cjk)}
+
+  /* header */
+  .hd{background:#fff;color:var(--ink);padding:17px 30px 15px;border-bottom:4px solid var(--gold);display:flex;justify-content:space-between;align-items:center;gap:24px}
+  .hd .logo{height:64px;width:auto;display:block}
+  .hd .tag{font-size:11.5px;color:var(--slate);margin-top:9px;letter-spacing:.3px}
+  .hd .meta{text-align:right;font-size:10px;line-height:1.7;color:var(--slate);white-space:nowrap}
+  .hd .meta .f{color:var(--gold-deep);font-weight:700;letter-spacing:1px}
+  .hd .meta .w{font-weight:700;color:var(--red)}
+
+  /* title band */
+  .title{background:linear-gradient(120deg,var(--red),var(--red-ink));color:#fff;padding:22px 30px;position:relative;overflow:hidden}
+  .title .glyph{position:absolute;right:-6px;top:50%;transform:translateY(-50%);font-family:var(--cjk);font-weight:700;font-size:150px;color:rgba(255,255,255,.07);line-height:1}
+  .title .kk{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+  .title h1{font-family:var(--serif);font-weight:700;font-size:34px;line-height:1.05}
+  .title h1 .cn{font-family:var(--cjk);font-size:22px;color:var(--gold);margin-left:8px}
+  .title p{font-size:11.5px;color:rgba(255,255,255,.92);margin-top:8px;max-width:74ch;line-height:1.5}
+
+  /* body */
+  .body{flex:1;display:grid;grid-template-columns:1.32fr .88fr;gap:0}
+  .tl{padding:18px 24px 16px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+  .side{padding:18px 22px 16px;background:var(--warm);display:flex;flex-direction:column}
+  .sec{font-size:9px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+
+  /* timeline */
+  .tline{position:relative;flex:1;padding-left:8px;padding-top:4px;display:flex;flex-direction:column;justify-content:space-between}
+  .tline::before{content:"";position:absolute;left:51px;top:4px;bottom:4px;width:2px;background:var(--line)}
+  .mile{position:relative;padding:0 0 0 74px;min-height:38px}
+  .mile .yr{position:absolute;left:0;top:-2px;width:44px;text-align:right;font-family:var(--serif);font-weight:700;font-size:15px;color:var(--red)}
+  .mile .dot{position:absolute;left:44px;top:3px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid #fff;box-shadow:0 0 0 1px var(--line);z-index:2}
+  .mile h3{font-size:12.5px;font-weight:700;color:var(--ink);margin-bottom:2px}
+  .mile p{font-size:10px;color:var(--slate);line-height:1.45}
+
+  /* side blocks */
+  .origin{background:#fff;border:1px solid var(--line);border-left:3px solid var(--red);border-radius:5px;padding:12px 13px;margin-bottom:13px}
+  .origin h4{font-family:var(--serif);font-size:13px;color:var(--red-ink);margin-bottom:5px}
+  .origin p{font-size:10px;color:var(--slate);line-height:1.5}
+  .pull{font-family:var(--serif);font-style:italic;font-size:13.5px;line-height:1.4;color:var(--red-ink);border-left:3px solid var(--gold);padding-left:13px;margin-bottom:13px}
+  .mission{margin-bottom:13px}
+  .mission .sec{margin-bottom:6px}
+  .mission p{font-size:10px;color:var(--slate);line-height:1.5}
+  .stats{margin-top:auto;background:var(--red);color:#fff;border-radius:6px;padding:11px 13px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center}
+  .stats .n{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--gold)}
+  .stats .l{font-size:7.6px;color:rgba(255,255,255,.85);margin-top:2px;line-height:1.25;text-transform:uppercase;letter-spacing:.3px}
+
+  /* footer */
+  .ft{background:var(--ink);color:rgba(255,255,255,.82);padding:11px 30px;display:flex;justify-content:space-between;align-items:center;font-size:9.4px}
+  .ft b{color:#fff}
+  .ft .gold{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div>
+      <img class="logo" src="../assets/img/logo.png" alt="Chinese Culture Connection — 華夏文化協會">
+      <div class="tag">Where Cross-Cultural Understanding Begins</div>
+    </div>
+    <div class="meta">
+      <div class="f">FOUNDED 1985</div>
+      <div>Malden, MA · 501(c)(3) Nonprofit</div>
+      <div class="w">www.chinesecultureconnection.org</div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="title">
+    <span class="glyph cjk" aria-hidden="true">緣</span>
+    <div class="kk">Our Story · 1985–2025</div>
+    <h1>Four Decades of Building Bridges<span class="cn">我們的故事</span></h1>
+    <p>For 40 years, the Chinese Culture Connection has grown from one parent's classroom idea into one of Greater Boston's most enduring bridges between Chinese immigrant communities and the broader public.</p>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- TIMELINE -->
+    <div class="tl">
+      <div class="sec">A 40-Year Journey</div>
+      <div class="tline">
+
+        <div class="mile">
+          <div class="yr">1985</div><div class="dot"></div>
+          <h3>A classroom idea</h3>
+          <p>Founder Catherine Hsu creates an &ldquo;Introduction to Chinese Culture&rdquo; curriculum for her son's class in Reading, MA. The warm response grows it into a nonprofit dedicated to sharing Chinese language and culture.</p>
+        </div>
+
+        <div class="mile">
+          <div class="yr">1999</div><div class="dot"></div>
+          <h3>A home in Malden</h3>
+          <p>At the invitation of then-Mayor Richard C. Howard, CCC relocates to Malden to support the city's fast-growing Asian immigrant population and serve as a liaison between Asian and mainstream communities across Greater Boston.</p>
+        </div>
+
+        <div class="mile">
+          <div class="yr">2000s<br>–2010s</div><div class="dot"></div>
+          <h3>Traditions take root</h3>
+          <p>Signature celebrations are born — the Malden Lunar New Year Celebration (now one of Greater Boston's largest free cultural events), the Thanksgiving Ping Pong Tournament, the Annual Gala &amp; Awards, East Meets West dialogues, and the Little Dragon youth programs.</p>
+        </div>
+
+        <div class="mile">
+          <div class="yr">2025</div><div class="dot"></div>
+          <h3>A new chapter, in our 40th year</h3>
+          <p>CCC opens a new headquarters at 75 Pleasant Street, launches the bilingual <i>CCC Quarterly Journal</i>, and pilots three new programs — a Community Bilingual Library, Bilingual Rhythm Time, and Friday Tai Chi.</p>
+        </div>
+
+        <div class="mile">
+          <div class="yr">Today</div><div class="dot"></div>
+          <h3>Serving thousands every year</h3>
+          <p>Through education, the arts, and community across Massachusetts, New Hampshire, and Rhode Island — and just getting started.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SIDE -->
+    <div class="side">
+      <div class="origin">
+        <h4>How it began</h4>
+        <p>It started with one mother wanting her son's classmates to understand and celebrate Chinese culture. Forty years later, that simple act of sharing has touched thousands of families — newcomers and neighbors alike.</p>
+      </div>
+
+      <div class="pull">&ldquo;Where cross-cultural understanding begins.&rdquo;</div>
+
+      <div class="mission">
+        <div class="sec">Our Mission</div>
+        <p>Through diverse educational programs, cross-cultural dialogues, and special events, CCC empowers Chinese immigrants and Chinese descendants of Greater Boston to appreciate and retain their heritage, develop bicultural fluency, and enrich others with a deeper understanding of Chinese language and culture.</p>
+      </div>
+
+      <div class="mission">
+        <div class="sec">Leadership</div>
+        <p>A 501(c)(3) nonprofit founded by Catherine Hsu and led today by Executive Director Mei Hung, guided by a dedicated volunteer Board of Directors.</p>
+      </div>
+
+      <div class="stats">
+        <div><div class="n">40+</div><div class="l">Years of<br>Service</div></div>
+        <div><div class="n">10,000+</div><div class="l">Reached<br>Each Year</div></div>
+        <div><div class="n">15+</div><div class="l">Cities &amp;<br>Towns</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ft">
+    <div><b>Chinese Culture Connection</b> &nbsp;·&nbsp; <span class="cjk">華夏文化協會</span> &nbsp;·&nbsp; Founded 1985 · Malden, MA</div>
+    <div><span class="gold">www.chinesecultureconnection.org</span></div>
+  </div>
+
+</div>
+</body>
+</html>
